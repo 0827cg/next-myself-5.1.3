@@ -1,0 +1,73 @@
+// Post Expanded
+//在index.html中承载所有已经显示的文章(被包含与class=main-inner的div中,与每一篇文章有关系的最近一层div)
+// --------------------------------------------------
+.posts-expand {
+  padding-top: 0;
+
+  .post-title,
+  .post-meta {
+    text-align: $site-meta-text-align;
+    +mobile() { text-align: center; }
+  }
+  .post-eof { display: none; }
+
+  .post { margin-top: 100px; }   //设置index.html页面中各片文章之间的间距
+  .post:first-child { margin-top: 0; }
+
+  .post-meta {
+    margin-top: 5px;
+    margin-bottom: 20px;
+  }
+
+  .post-title {
+    position: relative;
+    font-size: $font-size-headings-base;
+    font-weight: 300;
+    +mobile() { font-size: $font-size-headings-small; }
+    +desktop-large() { font-size: $font-size-headings-large; }
+  }
+  .post-title:hover:before { background: $black-deep; }
+
+  .post-body {
+    +mobile() { font-size: $font-size-small; }
+  }
+
+  .post-body img { margin: 0; }
+
+  .post-tags {
+    text-align: left;
+    a {
+      padding: 1px 5px;
+      background: $whitesmoke;
+      border-bottom: none;
+    }
+    a:hover { background: $grey-light; }
+  }
+  .post-nav { margin-top: 40px; }
+}
+
+//阅读全文按钮,属div
+.post-button {
+  margin-top: 20px;
+  text-align: center;
+
+  a {
+    margin: 0 8px 8px 0 !important;
+    font-size: $font-size-base;
+    color: $grey-dim;
+    background: none;
+	padding-left: 5px;
+	padding-right: 5px;
+	border: 2px solid #ffffff;
+	border-radius: 3px;
+	//radius还需要到base.styl中配置read-more-border-radius 
+	border-bottom: 2px solid $black-deep-self;
+    transition-property: border;
+
+    +mobile() { font-size: $font-size-small; }
+    +desktop-large() { font-size: $font-size-large; }
+
+
+    &:hover { }
+  }
+}

@@ -1,0 +1,70 @@
+// Header
+//全局变量的属性值($xxx)存放在/css/_variables/base.styl文件里面
+// --------------------------------------------------
+.header { background: $black-deep-self; }
+.header-inner {
+  padding: 15px 0 15px;
+  clearfix();
+
+  +mobile() {
+    width: auto;
+    margin-bottom: 50px;
+    padding: 10px;
+  }
+}
+
+//导航栏和logo所在的整个的div(被包含在class=header的header标签中)
+.site-meta {
+  float: left;
+  margin-left: -20px;
+  line-height: normal;
+
+  +mobile() {
+    margin-left: 10px;
+  }
+
+  .brand {
+    padding: 2px 1px;
+    background: none;
+
+    +mobile() { display: block; }
+  }
+
+  .logo { display: none; }
+
+  .site-title {
+    font-size: 22px;
+    font-weight: bolder;
+	
+	//add myself
+	color: $in-black-deep-self ;
+
+    +mobile() { line-height: 34px; }
+  }
+}
+
+
+.logo-line-before,
+.logo-line-after {
+  display: block;
+  overflow: hidden;
+  margin: 0 auto;
+  width: 100%;
+
+  +mobile() { display: none; }
+
+  i {
+    position: relative;
+    display: block;
+    height: 2px;
+	
+	//update
+    background: $in-black-deep-self;    //logo的两条线的颜色
+    +mobile() { height: 3px; }
+  }
+}
+
+.use-motion {
+  .logo-line-before i { left: -100%; }
+  .logo-line-after i { right: -100%; }
+}
