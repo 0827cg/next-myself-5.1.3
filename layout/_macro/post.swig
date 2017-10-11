@@ -92,11 +92,11 @@
                 <span class="post-meta-item-text">{{ __('post.modified') }}&#58;</span>
               {% endif %}
 			  {% if not is_index %}
-              <time title="{{ __('post.created') }}" itemprop="dateCreated datePublished" datetime="{{ moment(post.date).format() }}">
-                {{ date(post.date, config.all_date_format) }}
+              <time title="{{ __('post.modified') }}" itemprop="dateModified datePublished" datetime="{{ moment(post.updated).format() }}">
+                {{ date(post.updated, config.all_date_format) }}
               </time>
 			  {% else %}
-              <time title="{{ __('post.modified') }}" itemprop="dateModified" datetime="{{ moment(post.updated).format() }}">
+              <time title="{{ __('post.modified') }}" itemprop="dateModified datePublished" datetime="{{ moment(post.updated).format() }}">
                 {{ date(post.updated, config.date_format) }}
               </time>
 			  {% endif %}
