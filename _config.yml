@@ -65,7 +65,7 @@ footer:
 canonical: true
 
 # Change headers hierarchy on site-subtitle (will be main site description) and on all post/pages titles for better SEO-optimization.
-seo: false
+seo: true
 
 # If true, will add site-subtitle to index page, added in main hexo config.
 # subtitle: Subtitle
@@ -140,6 +140,10 @@ links_layout: block
 #links_layout: inline
 links:
   QQ 爹博客: https://qqdie.com
+  不才博客: http://www.neverlove.me/
+  香菇社长: https://siitake.cn/
+  若是凉夜已成梦: https://www.dreamwings.cn/
+  兰陵の记事簿: https://blog.thkira.com/
 
 # Sidebar Avatar
 # in theme directory(source/images): /images/avatar.gif
@@ -505,7 +509,7 @@ busuanzi_count:
 
 
 # Enable baidu push so that the blog will push the url to baidu automatically which is very helpful for SEO
-baidu_push: false
+baidu_push: true
 
 # Google Calendar
 # Share your recent schedule to others via calendar page
